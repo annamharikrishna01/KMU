@@ -1,0 +1,101 @@
+input { outline:none;}
+
+.bg-color-mode {
+  content: "";	
+  display: block;
+}
+
+#preview-img { display:block; }
+#polygon-tools { display:inline-block;}
+
+
+ #preview-img-wrap { display:inline-block; border:1px solid #aaa; position:relative;
+ background:#fff;
+ }
+	  #preview-img-wrap.over-drag { border:1px solid #0ff; background:#eee;}
+	  #preview-img-wrap img.moving { cursor:move; }
+	  /*#preview-img-wrap.over-drag {visibility:hidden;}*/
+    
+	  .rotate-mode { cursor: url('images/cur-rotate.png') 12 12, auto; }
+    .lasso-mode { cursor: url('images/lasso-cursor.png') 1 1, auto; }
+    .polygonal-lasso-mode { cursor: url('images/polygonal-lasso-cursor.png') 1 1, auto; }
+    
+	  .add-mode { cursor: crosshair; }
+	  .scale-mode { cursor: e-resize;}
+
+.hide-markers .marker{ display:none;}
+	  .marker { position:absolute; 
+	  	width:8px; 
+	  	height:8px;
+	  	margin-left:-5px;
+	  	margin-top:-5px;
+	   border:1px solid #666;
+	   background:#efefef;
+	   cursor:move;
+	   z-index:2;
+	   }
+	   .marker:hover {background:#33FF99;}
+	   .marker.active{ background:#f00; z-index:3;}
+
+.hide-lines .marker-line { display:none;  }
+
+	   .marker-line {
+	   	position: absolute; /* allows to position it anywhere */
+    height: 1px; /* your chosen line width */
+    background: url(images/selection.gif);
+     /* make sure this is above your other elements */
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin:0 100%;
+    -o-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+
+	   }
+
+	   #clip-circle { position:absolute; display:none; background:rgba(255,255,255,0); cursor:move; }
+
+.ui-resizable-handle { position: absolute;font-size: 0.1px; display: block; }
+.ui-resizable-s { cursor: s-resize; height: 7px; width: 100%; bottom: -5px; left: 0; }
+.ui-resizable-e { cursor: e-resize; width: 7px; right: -5px; top: 0; height: 100%; }
+.ui-resizable-se { cursor: se-resize; width: 12px; height: 12px; right: 1px; bottom: 1px; }
+
+.code-result textarea,
+#svg-text,
+#code-text { width:400px; height:200px; outline:none;}
+
+#preview-img-wrap canvas{ position:absolute; left:0; top:0;
+ -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+	user-select: none;
+}
+
+#working-area { margin-bottom:30px; display:inline-block;}
+#coordinates-corner {padding:5px 10px; height:12px; background:#eee;
+width:90px;
+
+color:#666;
+font-size:12px;
+float:right;
+margin-left:-109px;
+position:relative; top:-2px;
+
+}
+
+.position-input {width:30px; outline:none;}
+#positions-col-block { display:inline-block; height:32px; font-size:14px; margin-right:10px;}
+#positions-col-block .position-input {height:16px;}
+#positions-col-block strong { display:block; margin-bottom:5px;} 
+#selected-marker-block { margin-left:20px; opacity:0.5; cursor: default;}
+#selected-marker-block .tt-button { display:none;}
+#selected-marker-block.enabled { opacity:1; }
+#selected-marker-block.enabled .tt-button { display:inline-block;}
+
+#pick-image-btn { position:relative; width:auto; color:#333; height:auto; vertical-align:middle; padding:5px 10px;}
+#user-image-input { -webkit-appearance:none; outline:none !important; position:absolute; left:0; top:0; width:100%; height:100%; opacity:0;}
+
+#clip-path-notice { font-size:14px; color:#222; line-height:18px;}
+
+#files-texts { display:none;}
+
+#svg-file-download-lnk { text-decoration:none; font-size:14px;}
